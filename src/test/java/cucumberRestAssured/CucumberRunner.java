@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
     features = "classpath:features",
     dryRun = false,
     snippets = SnippetType.CAMELCASE,
-    tags = "@stage1",
+    tags = "@test",
     strict = true
 )
 
