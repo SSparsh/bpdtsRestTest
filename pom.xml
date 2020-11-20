@@ -14,7 +14,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <cucumber.version>5.7.0</cucumber.version>
-    <cluecumber-report-plugin.version>2.5.0</cluecumber-report-plugin.version>
 
     <java.version>1.8</java.version>
     <jetbrains-annotations.version>19.0.0</jetbrains-annotations.version>
@@ -109,30 +108,8 @@
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>com.trivago.rta</groupId>
-        <artifactId>cluecumber-report-plugin</artifactId>
-        <version>${cluecumber-report-plugin.version}</version>
-        <configuration>
-          <customPageTitle>${project.description}</customPageTitle>
-          <customParameters>
-            <BPDTS>API TEST REST</BPDTS>
-            <Project>${project.artifactId}</Project>
 
-          </customParameters>
-          <sourceJsonReportDirectory>${project.build.directory}/cucumber/jsonReports</sourceJsonReportDirectory>
-          <generatedHtmlReportDirectory>${project.build.directory}/cucumber/cluecumber</generatedHtmlReportDirectory>
-        </configuration>
-        <executions>
-          <execution>
-            <id>report</id>
-            <goals>
-              <goal>reporting</goal>
-            </goals>
-            <phase>test</phase>
-          </execution>
-        </executions>
-      </plugin>
+
     </plugins>
   </build>
 
